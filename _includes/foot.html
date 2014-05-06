@@ -1,0 +1,45 @@
+<div class="hint">
+    <p>使用<span>space</span>或者
+      <span class="glyphicon glyphicon-arrow-left"></span>
+      <span class="glyphicon glyphicon-arrow-right"></span>
+      来导航
+    </p>
+</div>
+<style>
+.hint span:first-child {
+  padding: 3px;
+  margin: 0 3px;
+  border-radius: 10px;
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+}
+</style>
+<script>
+if ("ontouchstart" in document.documentElement) {
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+<script src="/bower_components/impress.js/js/impress.js"></script>
+<script>
+var api = impress();
+api.init();
+$(document).ready(function(){
+  key('g', function(){
+    api.goto('overview');
+  })
+})
+// impress().init();
+</script>
+
+<!-- <script src="http://cdn.bootcss.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="http://cdn.bootcss.com/prettify/r298/prettify.min.js"></script>
+<script src="http://cdn.bootcss.com/keymaster/1.6.1/keymaster.min.js"></script> -->
+<script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="/bower_components/google-code-prettify/src/prettify.js"></script>
+<script src="/bower_components/keymaster/keymaster.js"></script>
+<script src="/js/hebi.js"></script>
+
+</body>
+</html>
